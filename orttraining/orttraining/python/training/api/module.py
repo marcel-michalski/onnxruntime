@@ -53,7 +53,7 @@ class Module:
         self._session_options = session_options if session_options is not None else SessionOptions()
 
         self._device = C.OrtDevice(
-            get_ort_device_type(self._device_type, device_id),
+            get_ort_device_type(self._device_type),
             C.OrtDevice.default_memory(),
             device_id,
         )
