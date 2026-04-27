@@ -382,7 +382,7 @@ class TrainingManager(GraphExecutionManager):
         else:
             fw_outputs_device_info = [
                 C.OrtDevice(
-                    get_ort_device_type(self._device.type, self._device.index),
+                    get_ort_device_type(self._device.type),
                     C.OrtDevice.default_memory(),
                     _utils.get_device_index(self._device),
                 )
@@ -394,7 +394,7 @@ class TrainingManager(GraphExecutionManager):
         else:
             bw_outputs_device_info = [
                 C.OrtDevice(
-                    get_ort_device_type(self._device.type, self._device.index),
+                    get_ort_device_type(self._device.type),
                     C.OrtDevice.default_memory(),
                     _utils.get_device_index(self._device),
                 )
